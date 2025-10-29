@@ -107,36 +107,88 @@ a:hover {
 
 /* Header & Navigation */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
-    z-index: 1000;
-    background-color: rgba(255, 255, 255, 0.8); /* 80% opacity */
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
+    margin-bottom: 0;
 }
 
 .header:hover {
-    background-color: rgba(255, 255, 255, 1); /* 100% opacity on hover */
+    background-color: rgba(255, 255, 255, 1);
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 0.3rem 5%;
     max-width: 1400px;
     margin: 0 auto;
+    height: 50px;
 }
 
 .logo {
+    display: flex;
+    align-items: center;
+    height: 50px; /* Match your navbar height */
+}
+
+.logo-img {
+    height: 24px; /* Slightly smaller to match reduced navbar */
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+/* Keep the text-based logo styles as fallback */
+.text-logo {
     font-size: 1.8rem;
     font-weight: 800;
     color: var(--primary);
 }
 
-.logo span {
+/* Profile picture in navigation */
+.profile-pic {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.profile-img {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--accent);
+    transition: all 0.3s ease;
+}
+
+.profile-pic:hover .profile-img {
+    transform: scale(1.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust navigation links to align with profile picture */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-links a:not(.profile-pic) {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:not(.profile-pic):hover {
+    color: var(--accent);
+}
+
+.text-logo span {
     color: var(--accent);
 }
 
@@ -220,6 +272,25 @@ a:hover {
     transform: translate(-50%, -50%) scale(1.05); /* Slight zoom on hover */
 }
 
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    transition: all 0.5s ease-in-out;
+    filter: blur(5px); /* Add blur by default */
+}
+
+.hero:hover .video-background video {
+    transform: translate(-50%, -50%) scale(1.05);
+    filter: blur(0); /* Remove blur on hover */
+}
+
 .video-overlay {
     position: absolute;
     top: 0;
@@ -229,12 +300,10 @@ a:hover {
     background: rgba(0, 0, 0, 0.5);
     z-index: 2;
     transition: all 0.5s ease-in-out;
-    backdrop-filter: blur(0px); /* Start with no blur */
 }
 
 .hero:hover .video-overlay {
     background: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px); /* Add blur on hover */
 }
 
 #video-overlay {
