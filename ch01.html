@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducAlte | Chapter 1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chapter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Educ<span>Alte</span></div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="index.html#courses">Courses</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="course-header">
+        <div class="course-container">
+            <a href="index.html#courses" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Courses
+            </a>
+            <h1 class="course-title">Chapter 1: Get to Know the Metaverse</h1>
+            <!-- <p class="course-subtitle">Explore the fundamentals of the metaverse, its history, and its potential impact on our digital future.</p> -->
+        </div>
+    </section>
+
+    <main class="course-container">
+        <!-- Progress Dashboard -->
+        <div class="progress-dashboard">
+            <div class="progress-header">
+                <h2 class="progress-title">Course Progress</h2>
+                <span class="progress-count">0/3 sections completed</span>
+            </div>
+            
+            <div class="module">
+                <h3 class="module-title">Understanding AI Fundamentals</h3>
+                
+                <div class="section-item" data-section="1">
+                    <div class="section-checkbox">
+                        <i class="fas fa-check" style="display: none;"></i>
+                    </div>
+                    <div class="section-details">
+                        <div class="section-title">Section 1: What is AI? A Historical Perspective</div>
+                        <div class="section-status">Not started</div>
+                    </div>
+                </div>
+                
+                <div class="section-item" data-section="2">
+                    <div class="section-checkbox">
+                        <i class="fas fa-check" style="display: none;"></i>
+                    </div>
+                    <div class="section-details">
+                        <div class="section-title">Section 2: Key Concepts in AI</div>
+                        <div class="section-status">Not started</div>
+                    </div>
+                </div>
+                
+                <div class="section-item" data-section="3">
+                    <div class="section-checkbox">
+                        <i class="fas fa-check" style="display: none;"></i>
+                    </div>
+                    <div class="section-details">
+                        <div class="section-title">Section 3: AI vs. Human Intelligence</div>
+                        <div class="section-status">Not started</div>
+                    </div>
+                </div>
+                
+                <h3 class="module-title">Exercises</h3>
+                <div class="section-item" data-section="exercises">
+                    <div class="section-checkbox">
+                        <i class="fas fa-check" style="display: none;"></i>
+                    </div>
+                    <div class="section-details">
+                        <div class="section-title">Chapter 1 Exercises</div>
+                        <div class="section-status">3 exercises to complete</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="course-content">
+            <h2>About This Chapter</h2>
+            <p>"All One Needs to Know About AI" is a comprehensive course designed to demystify artificial intelligence (AI) and equip you with the knowledge and skills to leverage AI in your personal and professional life. Curated by Professor Pan Hui and a team of esteemed researchers at HKUST and HKUST(GZ), this course is tailored for individuals from all backgrounds who wish to understand AI's potential and ethical implications. Through engaging lectures, hands-on projects, and critical discussions, you'll gain practical insights into AI literacy, AI-assisted coding, and the ethical considerations crucial for responsible AI use.
+<br><br>
+By the end of this course, participants will have a well-rounded understanding of AI's capabilities and limitations, be able to apply AI tools in various contexts, and critically assess the ethical implications of AI technologies. Each part culminates in a hands-on project, ensuring that learners not only gain theoretical knowledge but also practical experience to tackle real-world challenges.
+</p>
+        
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EducAlte</h3>
+                    <p>Empowering the next generation of tech innovators through accessible education.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>MC² Lab</p> 
+                    <p>HKUST(GZ)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EducAlte. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sectionItems = document.querySelectorAll('.section-item');
+            const progressCount = document.querySelector('.progress-count');
+            
+            // Load saved progress from localStorage
+            const savedProgress = JSON.parse(localStorage.getItem('courseProgress')) || {
+                completedSections: [],
+                lastUpdated: null
+            };
+
+            // Update UI based on saved progress
+            function updateProgressUI() {
+                let completedCount = 0;
+                const totalSections = sectionItems.length - 1; // Exclude exercises from total count
+                
+                sectionItems.forEach(section => {
+                    const sectionId = section.getAttribute('data-section');
+                    const isCompleted = savedProgress.completedSections.includes(sectionId);
+                    
+                    if (isCompleted) {
+                        section.classList.add('completed');
+                        section.querySelector('.section-checkbox').innerHTML = '<i class="fas fa-check"></i>';
+                        if (sectionId === 'exercises') {
+                            section.querySelector('.section-status').textContent = 'Completed';
+                        } else {
+                            section.querySelector('.section-status').textContent = 'Completed';
+                            completedCount++;
+                        }
+                    } else {
+                        section.classList.remove('completed');
+                        section.querySelector('.section-checkbox').innerHTML = '';
+                        if (sectionId === 'exercises') {
+                            section.querySelector('.section-status').textContent = '3 exercises to complete';
+                        } else {
+                            section.querySelector('.section-status').textContent = 'Not started';
+                        }
+                    }
+                });
+                
+                // Update progress counter (exclude exercises from count)
+                progressCount.textContent = `${completedCount}/${totalSections} sections completed`;
+            }
+
+            // Toggle section completion
+            function toggleSection(section) {
+                const sectionId = section.getAttribute('data-section');
+                const index = savedProgress.completedSections.indexOf(sectionId);
+                
+                if (index > -1) {
+                    savedProgress.completedSections.splice(index, 1);
+                } else {
+                    savedProgress.completedSections.push(sectionId);
+                }
+                
+                savedProgress.lastUpdated = new Date().toISOString();
+                localStorage.setItem('courseProgress', JSON.stringify(savedProgress));
+                updateProgressUI();
+            }
+
+            // Add click event listeners
+            sectionItems.forEach(section => {
+                section.addEventListener('click', (e) => {
+                    // Don't navigate if clicking on a link inside the section
+                    if (e.target.tagName === 'A') return;
+                    
+                    const sectionId = section.getAttribute('data-section');
+                    if (sectionId === '1') {
+                        // Navigate to section 1 page
+                        window.location.href = 'ch01-sec01.html';
+                    } else if (sectionId === '2' || sectionId === '3' || sectionId === 'exercises') {
+                        // For other sections, keep the toggle functionality
+                        toggleSection(section);
+                    }
+                });
+            });
+
+            // Initialize the UI
+            updateProgressUI();
+        });
+    </script>
+</body>
+</html>

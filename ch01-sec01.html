@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EducAlte | Chapter 1 - Section 1: What is AI?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/chapter.css">
+    <link rel="stylesheet" href="css/section.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">Educ<span>Alte</span></div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="index.html#courses">Courses</a>
+                <a href="https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=YOUR_GOOGLE_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&scope=email%20profile&access_type=offline" class="auth-link">Login</a>
+            </div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </nav>
+    </header>
+<section class="course-header">
+        <div class="course-container">
+            <a href="ch01.html" class="back-button">
+                <i class="fas fa-arrow-left"></i> Back to Chapter 1
+            </a>
+            <h1 class="course-title">Introduction to AI-Assisted Coding Tools</h1>
+        </div>
+    </section>
+    <div class="section-container">
+        <!-- Virtual Teacher Selection -->
+        <div class="teacher-selection">
+            <h2>Choose Your Virtual Teacher</h2>
+            <p>Select a virtual teacher to guide you through this section:</p>
+            
+            <div class="teacher-options">
+                <div class="teacher-option" data-teacher="pan-hui" data-hover-img="\assets\imgs\teacher\profPanHui.jpg">
+                    <img src="\assets\imgs\teacher\profPanHui_sketch.png" alt="Prof. Pan HUI">
+                    <h3>Prof. Pan HUI</h3>
+                    <p>Computational Media and Arts, HKUST(GZ)</p>
+                </div>
+                <div class="teacher-option" data-teacher="maya">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Maya">
+                    <h3>Maya Patel</h3>
+                    <p>Machine Learning Engineer</p>
+                </div>
+                <div class="teacher-option" data-teacher="james">
+                    <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="James">
+                    <h3>James Wilson</h3>
+                    <p>Data Science Professor</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Section with CC -->
+        <div class="video-cc-container">
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/WzdScFNiPUA" 
+                        title="What is AI? - A Historical Perspective" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+            
+            <!-- CC Script Panel -->
+            <div class="cc-panel">
+                <div class="cc-header">
+                    <h3>Closed Captions</h3>
+                    <select class="language-selector">
+                        <option value="en">English</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                        <option value="zh">中文</option>
+                    </select>
+                </div>
+                <div class="cc-content">
+                    <div class="cc-transcript" data-lang="en">
+                        <p data-time="0:05"><span class="time">0:05</span> Welcome to our introduction on AI.</p>
+                        <p data-time="0:12"><span class="time">0:12</span> In this section, we'll explore the fundamentals of artificial intelligence.</p>
+                        <p data-time="0:20"><span class="time">0:20</span> AI is transforming how we interact with technology.</p>
+                        <p data-time="0:28"><span class="time">0:28</span> From voice assistants to self-driving cars, AI is everywhere.</p>
+                        <p data-time="0:35"><span class="time">0:35</span> Let's dive deeper into how AI works.</p>
+                    </div>
+                    <div class="cc-transcript" data-lang="es" style="display: none;">
+                        <p data-time="0:05"><span class="time">0:05</span> Bienvenidos a nuestra introducción sobre IA.</p>
+                        <p data-time="0:12"><span class="time">0:12</span> En esta sección, exploraremos los fundamentos de la inteligencia artificial.</p>
+                    </div>
+                    <div class="cc-transcript" data-lang="fr" style="display: none;">
+                        <p data-time="0:05"><span class="time">0:05</span> Bienvenue à notre introduction sur l'IA.</p>
+                        <p data-time="0:12"><span class="time">0:12</span> Dans cette section, nous explorerons les bases de l'intelligence artificielle.</p>
+                    </div>
+                    <div class="cc-transcript" data-lang="zh" style="display: none;">
+                        <p data-time="0:05"><span class="time">0:05</span> 欢迎来到我们的AI介绍。</p>
+                        <p data-time="0:12"><span class="time">0:12</span> 在本节中，我们将探讨人工智能的基础知识。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Section Material -->
+        <div class="section-material">
+            <h2>Section Material</h2>
+            
+            <h3>Introduction to AI</h3>
+            <p>Artificial Intelligence (AI) refers to the simulation of human intelligence in machines that are programmed to think like humans and mimic their actions. The term may also be applied to any machine that exhibits traits associated with a human mind such as learning and problem-solving.</p>
+            
+            <h3>Historical Timeline</h3>
+            <p><strong>1950s:</strong> The birth of AI as an academic discipline. Alan Turing proposes the Turing Test to determine if a machine can exhibit intelligent behavior.</p>
+            <p><strong>1960s-70s:</strong> Early AI programs demonstrate simple problem-solving and language understanding. The first chatbot, ELIZA, is created.</p>
+            <p><strong>1980s-90s:</strong> Expert systems become popular. Machine learning algorithms begin to emerge.</p>
+            <p><strong>2000s-Present:</strong> The rise of big data and more powerful computing leads to breakthroughs in deep learning and neural networks.</p>
+            
+            <h3>Key Concepts</h3>
+            <p><strong>Machine Learning:</strong> A subset of AI that enables systems to learn and improve from experience without being explicitly programmed.</p>
+            <p><strong>Neural Networks:</strong> Computing systems inspired by the biological neural networks that constitute animal brains.</p>
+            <p><strong>Natural Language Processing (NLP):</strong> The ability of computers to understand, interpret, and generate human language.</p>
+            <p><strong>Computer Vision:</strong> The field of AI that enables computers to derive meaningful information from digital images and videos.</p>
+            
+            <h3>Applications of AI</h3>
+            <p>AI is transforming industries including healthcare, finance, transportation, and entertainment. From virtual assistants to self-driving cars, AI is becoming increasingly integrated into our daily lives.</p>
+        </div>
+    </div>
+    
+    <!-- Next Section Button -->
+    <div class="section-navigation">
+        <a href="ch01-sec02.html" class="next-section-btn">
+            Next Section: Key Concepts in AI <i class="fas fa-arrow-right"></i>
+        </a>
+    </div>
+    
+    <!-- Scroll to Top Button -->
+    <div class="scroll-indicator" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>EducAlte</h3>
+                    <p>Empowering the next generation of tech innovators through accessible education.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#courses">Courses</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>MC² Lab</p> 
+                    <p>HKUST(GZ)</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EducAlte. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Teacher Selection and Hover Effects
+        document.querySelectorAll('.teacher-option').forEach(option => {
+            // Click handler for selection
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.teacher-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                console.log('Selected teacher:', this.getAttribute('data-teacher'));
+            });
+            
+            // Hover effect for image change
+            const img = option.querySelector('img');
+            const hoverImg = option.getAttribute('data-hover-img');
+            const originalSrc = img.src;
+            
+            if (hoverImg) {
+                option.addEventListener('mouseenter', () => {
+                    img.src = hoverImg;
+                });
+                option.addEventListener('mouseleave', () => {
+                    img.src = originalSrc;
+                });
+            }
+        });
+
+        // CC Script Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const video = document.querySelector('iframe');
+            const languageSelector = document.querySelector('.language-selector');
+            const transcripts = document.querySelectorAll('.cc-transcript');
+            
+            // Language switching
+            languageSelector.addEventListener('change', function() {
+                const selectedLang = this.value;
+                
+                // Hide all transcripts
+                transcripts.forEach(transcript => {
+                    transcript.style.display = 'none';
+                });
+                
+                // Show selected language transcript
+                const activeTranscript = document.querySelector(`.cc-transcript[data-lang="${selectedLang}"]`);
+                if (activeTranscript) {
+                    activeTranscript.style.display = 'block';
+                }
+            });
+            
+            // Click to seek functionality
+            document.querySelectorAll('.cc-transcript p').forEach(paragraph => {
+                paragraph.addEventListener('click', function() {
+                    const timeString = this.getAttribute('data-time');
+                    const [minutes, seconds] = timeString.split(':').map(Number);
+                    const timeInSeconds = (minutes * 60) + seconds;
+                    
+                    // For YouTube iframe API, you would use:
+                    // player.seekTo(timeInSeconds);
+                    
+                    // For demo purposes, we'll just log the time
+                    console.log('Seeking to:', timeString);
+                    
+                    // Highlight the active line
+                    document.querySelectorAll('.cc-transcript p').forEach(p => {
+                        p.style.backgroundColor = 'transparent';
+                    });
+                    this.style.backgroundColor = '#e3f2fd';
+                });
+            });
+            
+            // Auto-scroll to active line (would be implemented with video time update event)
+            // setInterval(() => {
+            //     const currentTime = player.getCurrentTime();
+            //     // Find and highlight the current line based on currentTime
+            // }, 1000);
+        });
+        
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById('scrollToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollToTopBtn.classList.add('visible');
+            } else {
+                scrollToTopBtn.classList.remove('visible');
+            }
+        });
+        
+        scrollToTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Real-time scrolling script
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                // Scrolling down
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                // Scrolling up
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+        });
+        
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>
