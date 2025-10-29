@@ -131,11 +131,11 @@ a:hover {
 .logo {
     display: flex;
     align-items: center;
-    height: 50px; /* Match your navbar height */
+    height: 60px; /* Increased to accommodate larger logo */
 }
 
 .logo-img {
-    height: 24px; /* Slightly smaller to match reduced navbar */
+    height: 36px; /* Increased from 24px to 36px */
     width: auto;
     object-fit: contain;
     transition: all 0.3s ease;
