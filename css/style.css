@@ -253,6 +253,7 @@ a:hover {
     width: 100%;
     height: 100%;
     z-index: 1;
+    overflow: hidden;
 }
 
 .video-background video {
@@ -263,32 +264,19 @@ a:hover {
     min-height: 100%;
     width: auto;
     height: auto;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly zoomed in by default */
     object-fit: cover;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out, filter 0.5s ease-in-out;
+    filter: blur(5px);
+    /* Ensure the video covers the entire container */
+    min-width: 100.5%;
+    min-height: 100.5%;
+    object-position: center;
 }
 
 .hero:hover .video-background video {
-    transform: translate(-50%, -50%) scale(1.05); /* Slight zoom on hover */
-}
-
-.video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    transition: all 0.5s ease-in-out;
-    filter: blur(5px); /* Add blur by default */
-}
-
-.hero:hover .video-background video {
-    transform: translate(-50%, -50%) scale(1.05);
-    filter: blur(0); /* Remove blur on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Keep the same scale on hover */
+    filter: blur(0);
 }
 
 .video-overlay {

@@ -11,6 +11,10 @@
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Three.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.js"></script>
 </head>
 <body>
     <header class="header">
@@ -33,6 +37,7 @@
 
     <main>
         <section id="home" class="hero">
+            <div id="threejs-background"></div>
             <div class="video-background">
                 <video autoplay muted loop playsinline>
                     <source src="assets/vids/meta-demo_480p.mp4" type="video/mp4">
@@ -109,5 +114,6 @@
 
     <script src="js/main.js"></script>
     <script src="js/interactive-grid.js"></script>
+    <script src="js/three-scene.js"></script>
 </body>
 </html>
